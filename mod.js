@@ -1,16 +1,21 @@
-
-PleromaModCustomStyles = function () {
-    this.config = {
-        'stylesheet': 'style.css'
-    };
+function PleromaModBiggerEmojis () {
+  this.config = {
+    "stylesheet": "style.css"
+  };
 }
+[
+  function onDestroy () {
+    const styles = document.querySelectorAll("link[rel=\"stylesheet\"]");
+    for (const style of styles) {
+      if (style.getAttribute("href").endsWith("pleroma-mod-bigger-emojis/" + this.config.stylesheet)) {
+        style.remove();
+      }
+    }
+  },
 
-PleromaModCustomStyles.prototype.run = function() {
-    var head = document.getElementsByTagName('head')[0];
-    var stylesheet = document.createElement('link');
-    stylesheet.setAttribute('rel', 'stylesheet');
-    stylesheet.setAttribute('href', window.__pleromaModLoader.config.modDirectory + 'pleroma-mod-custom-styles/' + this.config.stylesheet);
-    head.appendChild(stylesheet);
-};
+  function run () {
+    PleromaModLoader.includeModCss("pleroma-mod-bigger-emojis/" + this.config.stylesheet);
+  }
+].forEach((fn) => { PleromaModBiggerEmojis.prototype[fn.name] = fn; });
 
-window.__pleromaModLoader.registerClass('PleromaModCustomStyles', PleromaModCustomStyles);
+PleromaModLoader.registerMod(PleromaModBiggerEmojis);
