@@ -1,13 +1,15 @@
-# Peroma Mod Custom Styles
+# Peroma Mod Bigger Emojis
 
-A simple pleroma-mod, that appends a stylesheet to pleroma.
+Pleroma mod for absturztaube's [pleroma-mod-loader](https://github.com/absturztaube/pleroma-mod-loader) that appends a stylesheet to pleroma increasing the normal size of emojis in posts, as well as increasing their size further on hover
+
+Forked from [Custom Styles](https://git.pleroma.social/absturztaube/pleroma-mod-loader/)
 
 ## Usage
 
 clone this repo in your pleroma-mods directory
 
 ```
-sudo -u pleroma git clone https://github.com/absturztaube/pleroma-mod-custom-styles.git`
+sudo -u pleroma git clone https://github.com/erisdisqordia/pleroma-mod-bigger-emojis.git`
 ```
 
-use this with the pleroma-mod-loader. add "custom-styles" to the configuration of the mod loader
+use this with the pleroma-mod-loader. add "bigger-emojis" to the configuration of the mod loader
