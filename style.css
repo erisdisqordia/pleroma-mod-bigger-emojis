@@ -1,34 +1,8 @@
-html body #content {
-    background-color: unset;
+.StatusContent .status-content img.emoji {
+  height: 38px;
+  width: 38px;
 }
-
-.instance-specific-panel .panel-body::after {
-    background-image: url("/static/tos.png");
-    background-size: contain;
-    content: "";
-    opacity: 0.1;
-    z-index: 0;
-    pointer-events: none;
-    background-repeat: no-repeat;
-    background-position: right;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-}
-
-.notifications .panel-body::after {
-    background-image: url("/images/pleroma-fox-tan-smol.png");
-    background-size: contain;
-    content: "";
-    opacity: 0.06;
-    z-index: 0;
-    pointer-events: none;
-    background-repeat: no-repeat;
-    top: 50px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
+.StatusContent .status-content img.emoji:hover {
+  transform: scale(1.4);
+  transition: 0.05s;
 }
